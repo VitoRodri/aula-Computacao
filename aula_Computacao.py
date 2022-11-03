@@ -24,6 +24,7 @@ x,y=fish(deck_player,deck_NPC)
 def discard(x):
     a=True
     while a==True:
+        deck_player
         print("Do you want to discard a card?")
         n=input()
         if n=="yes":
@@ -34,19 +35,23 @@ def discard(x):
                 show_deck(deck_player,deck_NPC)
                 fish(deck_player,deck_NPC)
             elif i=="first":
+                b=deck_player[12]
                 del(deck_player[12])
                 random.shuffle(deck_player)
                 show_deck(deck_player,deck_NPC)
                 x[0]=deck_player[12]
                 print("cartas do player"+str(x))
                 print("cartas do computador"+str(y))
+                deck_player.append(b)
             elif i=="second":
+                b=deck_player[13]
                 del(deck_player[13])
                 random.shuffle(deck_player)
                 show_deck(deck_player,deck_NPC)
                 x[1]=deck_player[12]
                 print("cartas do player"+str(x))
                 print("cartas do computador"+str(y))
+                deck_player.append(b)
             else:
                 print("Could not understand")
         else:
